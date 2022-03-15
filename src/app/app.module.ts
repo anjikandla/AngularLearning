@@ -12,7 +12,7 @@ import { ColorPageComponent } from './color-page/color-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
