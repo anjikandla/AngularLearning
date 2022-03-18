@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ColorPageComponent implements OnInit {
 
+  parentInp: string = 'parent data';
+
+  colors: string[] = ['orange','yellow', 'green', 'blue']
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  //listner
+  updateData(event: any){
+    console.log('parent', event);
   }
 
 }
