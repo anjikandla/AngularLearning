@@ -7,7 +7,11 @@ import { AppComponent } from './app.component';
 import { AppSelectComponent } from './color-page/app-select/app-select.component';
 import { ColorPageComponent } from './color-page/color-page.component';
 import { OrangeComponent } from './color-page/orange/orange.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +23,11 @@ import { OrangeComponent } from './color-page/orange/orange.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

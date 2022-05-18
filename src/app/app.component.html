@@ -41,7 +41,6 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
     color: white;
     font-weight: 600;
   }
@@ -325,8 +324,36 @@
     </svg>
   </a>
 </div>
-<div class="text-center">
+<!-- <div class="text-center">
   <a routerLinkActive="active" routerLink="/color-page">color-page</a>
+  
+</div> 
+<button type="button" class="btn btn-primary" (click)="navigate()">Color</button><br>-->
+ 
+<div class="container mt-5">
+  <mat-form-field appearance="standard">
+    <mat-label>UserName</mat-label>
+    <input matInput placeholder="UserName" [(ngModel)]="data">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+  <div class="clearfix"></div>
+  <button class="btn btn-sm themeDiv mt-2" (click)="SaveData()">Save</button>
+  <div class="clearfix"></div>
+  UserName: {{UserName}}
+  <div class="clearfix"></div>
+  <div class="card d-inline-flex mx-0 mt-2" style="height: auto;width: auto;">
+    <div class="card-body p-0">
+      <h2 class="card-title mt-0 lh-1 mb-3">ngSwitch</h2>
+      <button mat-raised-button color="primary" (click)="ngswitch('1')">One</button>
+      <button mat-raised-button color="primary" class="mx-2" (click)="ngswitch('2')">Two</button>
+      <button mat-raised-button color="primary" (click)="ngswitch('3')">Three</button>
+      <div [ngSwitch]="matchCase">
+        <div *ngSwitchCase="'1'">One#1</div>
+        <div *ngSwitchCase="'2'">Two#2</div>
+        <div *ngSwitchCase="'3'">Three#3</div>
+      </div>
+    </div>
+  </div>
 </div>
-<button type="button" class="btn btn-primary" (click)="navigate()">Color</button>
 <router-outlet></router-outlet>

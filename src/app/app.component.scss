@@ -1,0 +1,9 @@
+@import "brandcolors";
+@import "colors";
+.toolbar{
+    background-color: $bg-color;
+}
+
+.themeDiv{
+    @include warningPanel;
+}

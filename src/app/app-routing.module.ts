@@ -14,7 +14,7 @@ const routes: Routes = [
       {
         path: 'orange',
         component: OrangeComponent,
-        outlet: 'color-panel'
+        //outlet: 'color-panel'
       },
       {
         path: 'blue',
