@@ -1,0 +1,94 @@
+@orange_bg: #ff6000;
+@blue_bg: #0095ff;
+@fontSize:10px;
+@width:1px;
+@icon24: 24px;
+@img_path:"/assets/images";
+.border(@size,@style,@color){
+    border: @size @style @color;
+}
+.Icon(@size, @img){
+    width: @size * 2;
+    height: @size * 2;
+    background: url("@{img_path}/@{img}") no-repeat left center / contain;
+    @media (min-width:768px) and (max-width:960px){
+        width: @size;
+        height: @size;
+    }
+}
+.padding(@size:5px){
+    padding: @size;
+}
+
+.bg-secondary {
+    background-color: @orange_bg  !important;
+}
+
+.clrbg {
+    background-color: @orange_bg;
+   width:percentage(@width);
+    height: 150px;
+    .box1{
+        .border(1px,dashed,#fff);
+        .padding(10px);
+        border-radius: 5px;
+        .rounded-0 & {
+            border-radius: 0px;
+        }
+    }
+    .box2{
+        .border(1px,solid,#000);
+        .padding(10px);
+    }
+    @media (min-width:768px) and (max-width:960px) {
+        background-color: @blue_bg;
+    }
+    
+}
+h1{
+    @media (min-width:768px) and (max-width:960px){
+        font-size: @fontSize * 3;
+    }
+}
+.bg-secondary {
+    @media (min-width:768px) and (max-width:960px) {
+        background-color: @blue_bg !important;
+
+    }
+}
+.card-title{
+    color: ~"xxx";
+}
+.rightIcon{
+    .Icon(@icon24, "right_icon.png");
+}
+.location{
+    .Icon(@icon24, "location_icon.png")
+}
+.inline{
+    display: inline;
+}
+.padding{
+    padding: 5px;
+}
+.border0{
+    border: 0px;
+}
+.card-body{
+    p:extend(.padding, .border0){ font-style: italic;}
+}
+.module{
+    padding: 10px;
+    color: blue;
+    border: 1px solid red;
+    h3{
+        color: red;
+    }
+}
+.lineH{
+    line-height: normal;
+}
+.news:extend(.module h3){
+    font-style: italic;
+   /*.module;*/
+}

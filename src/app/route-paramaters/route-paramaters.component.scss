@@ -1,0 +1,13 @@
+$orange_bg: #ff6000;
+$blue_bg: #0095ff;
+.bg-secondary{
+    background-color: $orange_bg !important;
+}
+.clrbg{
+    background-color: $orange_bg;
+    width: 100%;
+    height: 150px;
+    @media (min-width:768px) and (max-width:960px) {
+            background-color:$blue_bg;
+    }
+}

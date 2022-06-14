@@ -1,0 +1,25 @@
+<div class="card d-inline-flex mx-0 mt-2">
+    <div class="card-body">
+        <h2 class="card-title mt-0 lh-1 mb-3">route-paramaters works!</h2>
+        <div class="d-flex">
+            <ul class="list-group d-inline-flex">
+                <li class="list-group-item" (click)="navigate(x)" *ngFor="let x of this.Userlist.data">
+                    <a mat-stroked-button class="primary">{{x.id}}</a>
+                </li>
+            </ul>
+            <div class="contentPart w-100 px-5">
+                <app-route-parameter-result [RouteID]="userID"></app-route-parameter-result>
+            </div>
+        </div>
+    </div>
+</div>
+<h1>Example heading <span class="badge bg-secondary">New</span></h1>
+<div class="card">
+    <div class="clrbg"></div>
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-color-page',
@@ -8,17 +9,23 @@ import { Component, OnInit } from '@angular/core';
 export class ColorPageComponent implements OnInit {
 
   parentInp: string = 'parent data';
+  msg:any;
+  @Input() public ParentComp:any;
+  colors:any = ['orange','yellow', 'green', 'blue']
 
-  colors: string[] = ['orange','yellow', 'green', 'blue']
-
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   //listner
-  updateData(event: any){
-    console.log('parent', event);
+  // updateData(event: any){
+  //   console.log('parent', event);
+  // }
+  navigate(msg:any) {
+    console.log(msg);
+    this.router.navigate(["/"+ msg ]);
+    //this.defaultPage = false;
   }
 
 }

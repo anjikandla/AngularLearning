@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import "brandcolors";
+@import "colors";
+@import "node_modules/rfs/scss";
 body{
     padding: 0px;
     margin: 0px;
@@ -7,3 +10,11 @@ body{
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.orangeBgClr{
+    @include orangeBgClr;
+}
+.card{
+    box-sizing: border-box !important;
+    width: 100% !important;
+    height: auto !important;
+}

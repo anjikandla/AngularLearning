@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./red.component.scss']
 })
 export class RedComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor() {
+    
+   }
 
   ngOnInit() {
+    //var cars = ["Toyota","Tata","Audi"];
+    const date = new Date();
+    console.log(date);
   }
 
 }

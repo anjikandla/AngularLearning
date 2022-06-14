@@ -1,0 +1,26 @@
+<div class="card d-inline-flex mx-0 mt-2 pb-0" style="height: auto;width: auto;">
+    <div class="card-body">
+      <h2 class="card-title mt-0 lh-1">Table Data</h2>
+      <div>
+        <table class="table mb-0">
+          <thead>
+            <tr>
+              <th *ngFor="let item of studentHeaderClm">{{item}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of studnetVales; let i = index;">
+              <td *ngFor="let item of studnetVales[i]; let k = index" [ngClass] = ' k == studnetVales[i].length-1 ? "text-end":"text-start" '>
+                {{item}}
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td [colSpan] = 'studentHeaderClm.length' class="text-end">{{totalMarks}}</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>

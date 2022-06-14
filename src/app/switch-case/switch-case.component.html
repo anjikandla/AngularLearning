@@ -1,0 +1,23 @@
+<div class="card d-inline-flex mx-0 mt-2">
+    <div class="card-body">
+      <h2 class="card-title mt-0 lh-1 mb-3">ngSwitch</h2>
+      <button mat-raised-button color="primary" (click)="ngswitch('1')">One</button>
+      <button mat-raised-button color="primary" class="mx-2" (click)="ngswitch('2')">Two</button>
+      <button mat-raised-button color="primary" (click)="ngswitch('3')">Three</button>
+      <div [ngSwitch]="matchCase">
+        <div *ngSwitchCase="'1'">
+          <div class="fw-bold">One# - {{matchCase}}</div>
+          <div class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, iusto sed! Fugit,</div>
+        </div>
+        <div *ngSwitchCase="'2'">
+          <div class="fw-bold">Two# - {{matchCase}}</div>
+          <div class="">A adipisci laudantium officia, mollitia ducimus unde obcaecati placeat aut ipsam autem dolor
+            dolores!</div>
+        </div>
+        <div *ngSwitchCase="'3'">
+          <div class="fw-bold">Three# - {{matchCase}}</div>
+          <div class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, iusto sed! Fugit,</div>
+        </div>
+      </div>
+    </div>
+  </div>

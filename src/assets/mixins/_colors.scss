@@ -13,8 +13,16 @@
     border: 1px solid rgb(186, 146, 0);
     background-color: rgb(186, 146, 0);
 }
+@mixin lightPanel{
+    border: 1px solid #daf1fb;
+    background-color: #daf1fb;
+}
 @mixin well{
     padding: 10px;
     width: 50%;
     margin: auto;
+}
+@mixin orangeBgClr{
+    color:#fff !important;
+    background-color: orange !important;
 }

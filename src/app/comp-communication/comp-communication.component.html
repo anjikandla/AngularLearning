@@ -1,0 +1,10 @@
+<div class="card d-inline-flex mx-0 mt-2" style="height: auto;width: auto;">
+    <div class="card-body">
+        <h2 class="card-title mt-0 lh-1">Component Communication</h2>
+        <div class="text-bg-light p-3 pt-1 border lightPanel">
+            <div class="text-secondary pb-2">---> This is Parent Component </div>
+            {{msg}}
+            <app-child-comp [DataForChild]="DataForChildComp" (DataForParent)="msg=$event"></app-child-comp>
+        </div>
+    </div>
+</div>

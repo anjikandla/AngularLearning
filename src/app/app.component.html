@@ -33,10 +33,12 @@
   .spacer {
     flex: 1;
   }
-  body{
+
+  body {
     padding: 0px;
     margin: 0px;
   }
+
   .toolbar {
     height: 60px;
     display: flex;
@@ -327,33 +329,73 @@
 <!-- <div class="text-center">
   <a routerLinkActive="active" routerLink="/color-page">color-page</a>
   
-</div> 
-<button type="button" class="btn btn-primary" (click)="navigate()">Color</button><br>-->
- 
+</div> -->
+<br>
+
 <div class="container mt-5">
-  <mat-form-field appearance="standard">
-    <mat-label>UserName</mat-label>
-    <input matInput placeholder="UserName" [(ngModel)]="data">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-  <div class="clearfix"></div>
-  <button class="btn btn-sm themeDiv mt-2" (click)="SaveData()">Save</button>
-  <div class="clearfix"></div>
-  UserName: {{UserName}}
-  <div class="clearfix"></div>
-  <div class="card d-inline-flex mx-0 mt-2" style="height: auto;width: auto;">
-    <div class="card-body p-0">
-      <h2 class="card-title mt-0 lh-1 mb-3">ngSwitch</h2>
-      <button mat-raised-button color="primary" (click)="ngswitch('1')">One</button>
-      <button mat-raised-button color="primary" class="mx-2" (click)="ngswitch('2')">Two</button>
-      <button mat-raised-button color="primary" (click)="ngswitch('3')">Three</button>
-      <div [ngSwitch]="matchCase">
-        <div *ngSwitchCase="'1'">One#1</div>
-        <div *ngSwitchCase="'2'">Two#2</div>
-        <div *ngSwitchCase="'3'">Three#3</div>
+  <!-- <button type="button" class="btn btn-primary" (click)="navigate()">Color Page</button> -->
+
+  <!-- <div class="row">
+    <div class="col-md-4">
+      <div class="card d-inline-flex mx-0 mt-2" >
+        <div class="card-body p-0">
+          <h2 class="card-title mt-0 lh-1 mb-3">TwoWay Data Binding - NgModel</h2>
+          <mat-form-field appearance="standard">
+            <mat-label>UserName</mat-label>
+            <input matInput placeholder="UserName" [(ngModel)]="data">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+          Input Data: {{data}}
+          <div class="clearfix"></div>
+          <button class="btn btn-sm themeDiv mt-2" (click)="SaveData()">Save</button>
+        </div>
       </div>
+    </div>
+    <div class="col-md-4">      
+      <div class="card d-inline-flex mx-0 mt-2">
+        <div class="card-body p-0">
+          <h2 class="card-title mt-0 lh-1 mb-3">Template Ref Variables</h2>
+          <mat-form-field appearance="standard">
+            <mat-label>TemRefValue</mat-label>
+            <input matInput #TemRef value="Hello">
+          </mat-form-field>
+          TemRefValue: {{TemRefValue}}<br>
+          <button class="btn btn-sm themeDiv mt-2" (click)="InputData(TemRef.value)">Capture Input Val</button>
+        </div>
+      </div>
+    </div>    
+  </div> -->
+  <div class="d-flex">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a mat-stroked-button class="primary" routerLinkActive="active" routerLink="/company">Company DataTable</a>
+      </li>
+      <li class="nav-item">
+        <a mat-stroked-button class="primary" routerLinkActive="active" routerLink="/componentCommunication">Component
+          Communication</a>
+      </li>
+      <li class="nav-item">
+        <a mat-stroked-button class="primary" routerLinkActive="active" routerLink="/SwitchCase">SwitchCase</a>
+      </li>
+      <li class="nav-item">
+        <a mat-stroked-button class="primary" routerLinkActive="active" routerLink="/DataTable">DataTable</a>
+      </li>
+      <li class="nav-item">
+        <a mat-stroked-button class="primary" routerLinkActive="active"
+          routerLink="/Date-Pipe-Operator">Date-Pipe-Operator</a>
+      </li>
+      <li class="nav-item">
+        <a mat-stroked-button class="primary" routerLinkActive="active"
+          routerLink="/RouteParameters">Route Parameters</a>
+      </li>
+      <li class="nav-item">
+        <a mat-stroked-button class="primary" routerLinkActive="active"
+          routerLink="/LessCss">Less CSS</a>
+      </li>
+    </ul>
+    <div class="contentPart w-100 px-5">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
-<router-outlet></router-outlet>
