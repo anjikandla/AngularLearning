@@ -13,13 +13,16 @@
         </div>
     </div>
 </div>
-<h1>Example heading <span class="badge bg-secondary">New</span></h1>
-<div class="card">
-    <div class="clrbg"></div>
+<div class="card d-inline-flex mx-0 mt-2">
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" (click)="childOne()">childOne</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="childTwo()">ChildTwo</a>
+            </li>
+        </ul>
     </div>
 </div>
+<router-outlet></router-outlet>

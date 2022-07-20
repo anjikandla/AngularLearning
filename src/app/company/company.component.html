@@ -2,29 +2,31 @@
   <div class="card-body p-0">
     <h2 class="card-title mt-0 lh-1">Table Data</h2>
     <div>
-      <mat-form-field appearance="standard">
+      <!-- <mat-form-field appearance="standard">
         <mat-label>Filter data</mat-label>
-        <input matInput #TemRef value="Hello" [ngModel]="mymodel" (ngModelChange)="valuechange($event)">
-      </mat-form-field>
-      <table class="table mb0">
-        <thead>
-          <tr>
-            <th *ngFor="let item of TableHeader">{{item}}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let item of userData; let i = index;">
-            <td *ngFor="let cell of TableHeader; let k = index">
-              {{item[cell]}}
-            </td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td [colSpan]='HeaderClm.length' class="text-end">{{totalMarks}}</td>
-          </tr>
-        </tfoot>
-      </table>
+        <input matInput value="Hello" [(ngModel)]="mymodel">
+      </mat-form-field> -->
+      <div class="table-responsive">
+        <table class="table mb0">
+          <thead>
+            <tr>
+              <th *ngFor="let item of TableHeader">{{item}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of userData | tableFilter: mymodel; let i = index;">
+              <td *ngFor="let cell of TableHeader; let k = index">
+                {{item[cell]}}
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td [colSpan]='HeaderClm.length' class="text-end">{{totalMarks}}</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
       <!-- <ul>
         <li *ngFor="let u of userData; let i = index;">{{u.name}}</li>
       </ul>

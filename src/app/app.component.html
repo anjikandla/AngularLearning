@@ -333,7 +333,7 @@
 <br>
 
 <div class="container mt-5">
-  <!-- <button type="button" class="btn btn-primary" (click)="navigate()">Color Page</button> -->
+  <!-- <button type="button" class="btn btn-nav-link" (click)="navigate()">Color Page</button> -->
 
   <!-- <div class="row">
     <div class="col-md-4">
@@ -367,35 +367,93 @@
     </div>    
   </div> -->
   <div class="d-flex">
-    <ul class="nav flex-column">
-      <li class="nav-item">
-        <a mat-stroked-button class="primary" routerLinkActive="active" routerLink="/company">Company DataTable</a>
-      </li>
-      <li class="nav-item">
-        <a mat-stroked-button class="primary" routerLinkActive="active" routerLink="/componentCommunication">Component
-          Communication</a>
-      </li>
-      <li class="nav-item">
-        <a mat-stroked-button class="primary" routerLinkActive="active" routerLink="/SwitchCase">SwitchCase</a>
-      </li>
-      <li class="nav-item">
-        <a mat-stroked-button class="primary" routerLinkActive="active" routerLink="/DataTable">DataTable</a>
-      </li>
-      <li class="nav-item">
-        <a mat-stroked-button class="primary" routerLinkActive="active"
-          routerLink="/Date-Pipe-Operator">Date-Pipe-Operator</a>
-      </li>
-      <li class="nav-item">
-        <a mat-stroked-button class="primary" routerLinkActive="active"
-          routerLink="/RouteParameters">Route Parameters</a>
-      </li>
-      <li class="nav-item">
-        <a mat-stroked-button class="primary" routerLinkActive="active"
-          routerLink="/LessCss">Less CSS</a>
-      </li>
-    </ul>
+    <div id="MainMenu">
+      <div class="list-group panel">
+        <a href="#Ang1" class="list-group-item" data-bs-toggle="collapse" aria-expanded="true" aria-controls="Ang1">Item 1 <i class="fa fa-caret-down"></i></a>
+        <div class="collapse show" id="Ang1" data-bs-parent="#MainMenu">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a mat-stroked-button class="nav-link" routerLinkActive="active" routerLink="/company">Company DataTable</a>
+            </li>
+            <li class="nav-item">
+              <a mat-stroked-button class="nav-link" routerLinkActive="active" routerLink="/componentCommunication">Component
+                Communication</a>
+            </li>
+            <li class="nav-item">
+              <a mat-stroked-button class="nav-link" routerLinkActive="active" routerLink="/SwitchCase">SwitchCase</a>
+            </li>
+            <li class="nav-item">
+              <a mat-stroked-button class="nav-link" routerLinkActive="active" routerLink="/DataTable">DataTable</a>
+            </li>
+            <li class="nav-item">
+              <a mat-stroked-button class="nav-link" routerLinkActive="active"
+                routerLink="/Date-Pipe-Operator">Date-Pipe-Operator</a>
+            </li>
+            <li class="nav-item">
+              <a mat-stroked-button class="nav-link" routerLinkActive="active" routerLink="/RouteParameters">Route
+                Parameters</a>
+            </li>
+            <li class="nav-item">
+              <a mat-stroked-button class="nav-link" routerLinkActive="active" routerLink="/LessCss">Less CSS</a>
+            </li>
+            <li class="nav-item">
+              <a mat-stroked-button class="nav-link" routerLinkActive="active" routerLink="/CssGrid">CSS Grid</a>
+            </li>
+          </ul>
+        </div>
+        <a href="#Ang2" class="list-group-item" data-bs-toggle="collapse" aria-expanded="false" aria-controls="Ang2">Item 1 <i class="fa fa-caret-down"></i></a>
+        <div class="collapse" id="Ang2" data-bs-parent="#MainMenu">
+          <ul class="nav nav-pills flex-column">
+            <li>
+              <a mat-stroked-button class="nav-link" routerLinkActive="active" routerLink="/AngMat">Material Lesson</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
     <div class="contentPart w-100 px-5">
       <router-outlet></router-outlet>
     </div>
   </div>
 </div>
+<!--<div class="container">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+    <div class="col">
+      Column 1
+    </div>
+    <div class="col">
+      Column 2
+    </div>
+    
+    <div class="col">
+      Column 3
+    </div>
+    <div class="col">
+      Column 4
+    </div>
+  </div>
+  <div class="col-3 bg-light p-3 border">
+    .col-3: width of 25%
+  </div>
+  <div class="clearfix">
+    <svg class="bd-placeholder-img col-md-6 float-md-end mb-3 ms-md-3" width="100%" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive floated image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Responsive floated image</text></svg>
+  
+    <p>
+      A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
+    </p>
+  
+    <p>
+      As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with some actual content in here, rather than just this boring placeholder text that goes on and on, but actually conveys no tangible information at. It simply takes up space and should not really be read.
+    </p>
+  
+    <p>
+      And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
+    </p>
+  </div>
+  <div class="grid">
+    <div class="g-col-4">Column 1</div>
+    <div class="g-col-4">Column 2</div>
+    <div class="g-col-4">Column 3</div>
+  </div>
+</div> -->

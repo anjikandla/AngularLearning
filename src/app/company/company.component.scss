@@ -4,3 +4,13 @@
     height: auto !important;
     padding: 16px;
 }
+.table-responsive{
+    max-height: calc(100vh - 290px);
+    thead{
+        tr > th{
+            position: sticky;
+            top:0;
+            background-color: #fff;
+        }
+    }
+}

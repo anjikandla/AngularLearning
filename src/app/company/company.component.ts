@@ -15,9 +15,9 @@ export class CompanyComponent implements OnInit {
   totalMarks: any;
   employeeTable: any =[]
   employeeHeader:any =[];
-  userData: any =[];
+  userData: any[] = [];
   TableHeader:any = [];
-  public mymodel:any;
+  public mymodel:string ="";
   constructor(private _studntData: StudentDataService) { }
 
   ngOnInit(): void {
@@ -47,7 +47,7 @@ export class CompanyComponent implements OnInit {
   }
   valuechange(newValue:any) {
     this.mymodel = newValue;
-    //console.log(newValue)
-    this.getUsers();
+    console.log(this.mymodel);
+    //this.getUsers();
   }
 }

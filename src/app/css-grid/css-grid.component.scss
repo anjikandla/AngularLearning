@@ -1,0 +1,68 @@
+@import "~node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/rfs/scss";
+@mixin border($size:1px,$style:solid,$color:#fff){
+    border: $size $style $color;
+}
+@mixin padding($sizeY,$sizeX){
+    padding: $sizeY $sizeX;
+}
+.grid_container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px;
+    gap:20px;
+    background:-webkit-linear-gradient(left, grey, grey 30%, white 30%, white);
+    .grid-item{
+        background-color: var(--bs-white);
+        @include border(1px,solid,var(--bs-white));
+        @include padding(20px,10px);
+    }
+    // .grid-item:nth-child(1){
+    //     grid-column-start: 1;
+    //     grid-column-end: 3;
+    // }
+    // .grid-item:nth-child(3){
+    //     grid-row-start: 2;
+    //     grid-row-end: 4;
+    // }
+}
+section{
+    counter-reset: count;
+    h1::before{
+        counter-increment: count;
+        content: counter(count)". ";
+    }
+    .sub{
+        counter-reset: subcount;
+        @include rfs(30px, margin-left);
+        h2::before{
+            counter-increment: subcount;
+            content: counter(count)"."counter(subcount)" ";
+        }
+    }
+}
+.dl{
+    list-style-type: circle;
+}
+
+.test{
+    color: green;
+}   
+p{
+    color: red;
+}
+#demo {color: blue;}
+.borderd{
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url("/assets/images/border.png") 40 round;
+}
+.newspaperhead{
+    column-span: all;
+}
+.newspaper{
+    column-count: 3;
+    column-gap: 30px;
+    column-rule: 1px solid red;
+    column-width: 300px;
+}

@@ -1,18 +1,37 @@
+//background: url("#{$img_path}/#{$img}") no-repeat left center / contain;
+@import "~bootstrap/scss/bootstrap-grid.scss";
+@import "~node_modules/bootstrap/scss/bootstrap";
 $orange_bg: #ff6000;
 $blue_bg: #0095ff;
+$mynewcolor: #d93eba;
 $fontSize:10px;
 $icon24: 24px;
 $img_path:"/assets/images";
+.btn-primary {
+    @include button-variant($mynewcolor, darken($mynewcolor, 7.5%), darken($mynewcolor, 10%), lighten($mynewcolor,5%), lighten($mynewcolor, 10%), darken($mynewcolor,30%));
+}
+
+.btn-outline-primary {
+    @include button-outline-variant($mynewcolor, #222222, lighten($mynewcolor,5%), $mynewcolor);
+}
+
+@mixin clr($cl){
+    color: $clr;
+}
 @mixin border($size:1px,$style:solid,$color:#fff){
     border: $size $style $color;
 }
 @mixin padding($size){
     padding: $size;
 }
+@mixin margin($size){
+    margin:$size;
+}
 @mixin Icon($size, $img){
     width: $size * 2;
     height: $size * 2;
-    background: url("#{$img_path}/#{$img}") no-repeat left center / contain;
+    
+    background:url("#{$img_path}/#{$img}") no-repeat left center/contain;
     @media (min-width:768px) and (max-width:960px){
         width: $size;
         height: $size;
@@ -58,11 +77,29 @@ h1{
     }
 }
 .module{
-    padding: 10px;
+    @include padding(5px);
+    @include border(1px,dashed,red);
     h3{
         color: red;
+        @include margin(0px);
     }
 }
 .news{
     @extend .module;
+}
+/*.card{
+    $orange_bg:#7b3204 !global;
+    background-color: $orange_bg;
+    @include padding(10px);
+    .box{
+        
+        background-color: $blue_bg;
+        @include clr(#fff);
+        @include padding(5px);
+    }
+}*/
+.card{
+    @include media-breakpoint-only(md){
+        background-color: var(--bs-green);
+    }
 }

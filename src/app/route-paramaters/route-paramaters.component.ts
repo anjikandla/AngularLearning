@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../user.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { UserService } from '../user.service';
 export class RouteParamatersComponent implements OnInit {
   public Userlist:any = [];
 
-  constructor(private UserServicelist: UserService, private _router:Router) { }
+  constructor(private UserServicelist: UserService, private _router:Router, private _activatedRoute:ActivatedRoute) { }
   public userID:any;
   ngOnInit(): void {
     this.getUsersList();
@@ -24,5 +24,11 @@ export class RouteParamatersComponent implements OnInit {
   navigate(x:any){
     this._router.navigate(['RouteParameters/', x.id]);
     this.userID = x.id;
+  }
+  childOne(){
+    this._router.navigate(['childRouteOne'],{relativeTo:this._activatedRoute})
+  }
+  childTwo(){
+    this._router.navigate(['childRouteTwo'],{relativeTo:this._activatedRoute})
   }
 }
